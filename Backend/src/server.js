@@ -31,16 +31,19 @@ const allowedOrigins = [
 ].filter(Boolean);
 
 // CORS
+// CORS with debugging
 app.use(
   cors({
     origin: (origin, callback) => {
-      // allow server-to-server, curl, postman
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
+        console.log(`✅ CORS allowed for: ${origin}`);
         return callback(null, true);
       }
 
+      console.error(`🚨 CORS BLOCKED for: ${origin}`);
+      console.log(`📋 Allowed origins: ${allowedOrigins.join(", ")}`);
       return callback(new Error(`CORS blocked for origin: ${origin}`));
     },
     credentials: true,
