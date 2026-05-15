@@ -234,3 +234,12 @@ Reducing food waste and helping communities through intelligent technology.
 ---
 
 ⭐ If you like this project, give it a star!
+
+
+## 🌟 Open Source Program
+
+This project is officially participating in GSSoC 2026.
+
+We welcome contributors of all levels 🚀
+
+Check Issues section to start contributing.
